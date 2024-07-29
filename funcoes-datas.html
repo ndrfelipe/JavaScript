@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript Aulas</title>
+	</head>
+	<body>
+		<script> 
+            /*
+			var data = new Date()
+           // document.write(data.getDate() + "/" + (data.getMonth() + 1) + '/' + data.getFullYear()) //
+            //o objeto data.getDate(), data.getMonth() + 1 e data.getFullYear() imprime o dia, mes e ano a partir do que 
+            //está configurado no browser.
+            
+            //desafio 01: adc / remover dias
+            document.write(data.toString())
+            data.setDate(data.getDate() + 1)
+            document.write('<hr />')
+            document.write(data.toString())
+            document.write('<hr />')
+            document.write('<br />')
+            document.write('<br />')
+
+            //desafio 01: adc / remover meses
+            document.write(data.toString())
+            data.setMonth(data.getMonth() + 1)
+            document.write('<hr />')
+            document.write(data.toString())
+            document.write('<hr />')
+            document.write('<br />')
+            document.write('<br />')
+
+            //desafio 01: adc / remover anos
+            document.write(data.toString())
+            data.setFullYear(data.getFullYear() + 1)
+            document.write('<hr />')
+            document.write(data.toString())
+            */
+
+            // OPERAÇÃO PARA CALCULAR A DIFERENÇA DE DATA ENTRE UMA DATA E OUTRA.
+
+            // data 1: 27/07/2024
+            var data1 = new Date(2024, 6, 27)
+
+            // data 2: 12/08/2024
+            var data2 = new Date(2024, 7, 12)
+
+            document.write(data1.toString())
+            document.write('<hr />')
+            document.write(data2.toString())
+
+            document.write('<br />')
+            document.write('<br />')
+            document.write('<hr />')
+            // converter datas para calculo
+            document.write(data1.getTime())
+            document.write('<hr />')
+            document.write(data2.getTime())
+
+            document.write('<br />')
+            document.write('<br />')
+            document.write('<hr />')
+
+            // subtraindo os millisegundos.
+            var millisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+            document.write(millisegundos_entre_datas)
+
+            document.write('<br />')
+            document.write('<br />')
+            document.write('<hr />')
+
+            var millisegundos_por_dias = (1*24*60*60*1000)
+            document.write("1 Dia tem: " + millisegundos_por_dias + ' milissegundos')
+
+            document.write('<br />')
+            document.write('<br />')
+            document.write('<hr />')
+
+            document.write("Diferença de dias entre: " + data1.toDateString() + ' e ' + data2.toDateString() + ' é de :' + Math.ceil(millisegundos_entre_datas / millisegundos_por_dias) + ' dias.')
+		</script>
+	</body>
+</html>

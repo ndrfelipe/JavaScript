@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript Aulas</title>
+
+        <script> 
+            function modificarBackground(corDeFundo){
+                document.getElementById('caixa').style.backgroundColor = corDeFundo
+            }
+
+            function perderFoco(redColor, greenColor){
+                var tamanhoCaracter = document.getElementById('caixa').value
+                if (tamanhoCaracter.length >=3){
+                    document.getElementById('caixa').style.backgroundColor = redColor
+                }else {
+                    document.getElementById('caixa').style.backgroundColor = greenColor
+                }
+            }
+        </script>
+		
+	</head>
+	<body>
+        <input id="caixa" type="text" onfocus="modificarBackground('#ffff00')" onblur="perderFoco('#ff0000','#008000')">
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript Aulas</title>
+        <script> 
+			var i = 5
+            //setTimeout(function(){document.write("lipethedev </br>")}, 1000);
+			
+			var x = setInterval(function(){
+				document.write(i + "</br>")
+				i--
+
+				if( i === 0){
+					clearInterval(x)
+					document.write('Seu tempo de login expirou.')
+				}
+			}, 1000)
+			
+        </script>
+	</head>
+	<body>
+		
+	</body>
+</html>

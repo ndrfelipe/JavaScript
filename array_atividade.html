@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript Aulas</title>
+
+		<script> 
+        var objetos = Array('Cadeira','Impressora','Garfo')
+
+            function adicionarElemento() {
+                var elemento = document.getElementById('campo_texto').value
+                
+                if (elemento === ''){
+                    alert('Informe um valor válido')
+                }else {
+                    if (objetos.indexOf(elemento) === -1){
+                        objetos.push(elemento)
+                        console.log(objetos)
+                        document.getElementById('campo_texto').value = ''
+                        alert('O objeto ' + elemento + " foi adicionado com sucesso.")
+                    }else{
+                        alert('Objeto já foi adicionado')
+                    }
+                }
+            }
+
+            function ordenarElemento() {
+                objetos.sort()
+                console.log(objetos)
+            }
+            
+        </script>
+	</head>
+	<body>
+        <input id="campo_texto" type="text">
+        <button id="adc" onclick="adicionarElemento()">Adicionar</button>
+        <button id="ord" onclick="ordenarElemento()">Ordenar</button>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript Aulas</title>
+	</head>
+	<body>
+		<script> 
+             var video = Array()
+               video[1] = Array()
+               video[1]['nome'] = 'Friends'
+               video[1]['categoria'] = 'Anime'
+
+               function getVideo(video){
+
+                try{
+                    //lógica + requisição https
+                    console.log(video[0]['nome']) // estou forçando um erro
+
+                }catch(erro){
+                    throw new Error('Houve um erro, mas se preocupa não pô, jaja a gente resolve!')
+                    tratarErro(erro)
+                    console.log('Agora sim podemos tratar esse erro')
+                }finally{
+                    console.log("Sempre passa por aqui (try / catch)")
+                }
+
+                console.log("A aplicação não morreu")
+               }
+
+
+               function tratarErro(e){
+                //lógica para registrar erro no servidor
+                console.log(e)
+               }
+               
+               getVideo(video)
+            
+        </script>
+	</body>
+</html>
